@@ -7,4 +7,5 @@
 
 [studylink]: https://www.inflearn.com/course/리액트-네이티브-기초/dashboard
 
-![img](/img/스크린샷 2021-03-28 오후 3.01.08.png)
+![Uploading 스크린샷 2021-03-28 오후 3.01.08.png…]()
+
