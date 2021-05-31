@@ -27,6 +27,14 @@ class App extends Component {
     });
   };
 
+  onDeleteNum = position => {
+    const newArray = this.state.random.filter((num, index) => {
+      return position != index;
+    });
+
+    this.setState({random: newArray});
+  };
+
   render() {
     return (
       <View style={styles.mainView}>
@@ -38,7 +46,7 @@ class App extends Component {
         </View>
 
         <Generator add={this.onAddRandomNum} />
-        <NumList num={this.state.random} />
+        <NumList num={this.state.random} delete={this.onDeleteNum} />
       </View>
     );
   }
