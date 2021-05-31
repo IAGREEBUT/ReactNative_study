@@ -16,12 +16,6 @@ class App extends Component {
         <View style={styles.subView}>
           <Text style={styles.mainText}>hello world1</Text>
         </View>
-        <View style={styles.subView}>
-          <Text>hello world2</Text>
-        </View>
-        <View style={styles.anotherSubView}>
-          <Text>hello world3</Text>
-        </View>
       </View>
     );
   }
@@ -30,16 +24,14 @@ class App extends Component {
 const styles = StyleSheet.create({
   mainView: {
     flex: 1,
-    backgroundColor: 'green',
+    backgroundColor: 'white',
     paddingTop: 50,
     alignItems: 'center',
     justifyContent: 'center',
   },
   subView: {
-    flex: 1,
     backgroundColor: 'yellow',
     marginBottom: 10,
-    width: '50%',
   },
   anotherSubView: {
     flex: 2,
@@ -50,8 +42,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   mainText: {
-    fontSize: 50,
-    fontWeight: 'bold',
+    fontSize: 20,
+    fontWeight: 'normal',
     color: 'red',
     padding: 20,
   },
