@@ -7,14 +7,39 @@
  */
 
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {
+  View,
+  Text,
+  StyleSheet,
+  TouchableOpacity,
+  TouchableWithoutFeedback,
+} from 'react-native';
 
 //참고 : jsx component를 return하므로 () => (이부분이 소괄호)
+
+//"TouchableOpacity"
 const Header = props => (
-  <View style={styles.header}>
-    <Text>{props.name}</Text>
-  </View>
+  <TouchableOpacity
+    style={styles.header}
+    onPress={() => alert('On Press')}
+    //onLongPress={() => alert('on long press')}
+    //onPressIn={() => alert('on press in')}
+    //onPressOut={() => alert('on press out')}
+  >
+    <View style={styles.header}>
+      <Text>{props.name}</Text>
+    </View>
+  </TouchableOpacity>
 );
+
+//"TouchableWithoutFeedback"
+// const Header = props => (
+//   <TouchableWithoutFeedback onPress={() => alert('hello world')}>
+//     <View style={styles.header}>
+//       <Text>{props.name}</Text>
+//     </View>
+//   </TouchableWithoutFeedback>
+// );
 
 const styles = StyleSheet.create({
   header: {
