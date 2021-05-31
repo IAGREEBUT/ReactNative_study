@@ -8,14 +8,17 @@
 
 import React, {Component} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
+import Header from './src/header';
 
 class App extends Component {
+  state = {
+    appName: 'My First App',
+  };
+
   render() {
     return (
       <View style={styles.mainView}>
-        <View style={styles.subView}>
-          <Text style={styles.mainText}>hello world1</Text>
-        </View>
+        <Header name={this.state.appName} />
       </View>
     );
   }
