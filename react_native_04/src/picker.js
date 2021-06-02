@@ -17,7 +17,6 @@ import {
 } from 'react-native';
 import {Picker} from '@react-native-picker/picker';
 import Slider from '@react-native-community/slider';
-import Superman from '../assets/images/superman.jpg';
 
 class PickerComponent extends Component {
   state = {
@@ -79,11 +78,6 @@ const styles = StyleSheet.create({
     fontSize: 50,
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  image: {
-    width: '100%',
-    height: 500,
-    backgroundColor: 'red',
   },
 });
 

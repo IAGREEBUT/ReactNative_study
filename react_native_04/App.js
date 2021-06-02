@@ -21,6 +21,7 @@ class App extends Component {
           resizeMode="cover"
           onLoadEnd={() => alert('Image Loaded!!')}
         />
+        {/*<PickerComponent></PickerComponent>*/}
       </View>
     );
   }
