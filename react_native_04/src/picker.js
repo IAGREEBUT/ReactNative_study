@@ -7,9 +7,17 @@
  */
 
 import React, {Component} from 'react';
-import {View, Text, StyleSheet, TextInput} from 'react-native';
+import {
+  View,
+  Text,
+  StyleSheet,
+  TextInput,
+  ActivityIndicator,
+  Image,
+} from 'react-native';
 import {Picker} from '@react-native-picker/picker';
 import Slider from '@react-native-community/slider';
+import Superman from '../assets/images/superman.jpg';
 
 class PickerComponent extends Component {
   state = {
@@ -38,6 +46,13 @@ class PickerComponent extends Component {
             step={10}
           />
 
+          <ActivityIndicator
+            style={{paddingTop: 200}}
+            size="large"
+            color="green"
+            animating={false}
+          />
+
           <Picker
             style={{height: 50, width: 250}}
             selectedValue={this.state.country}
@@ -45,9 +60,6 @@ class PickerComponent extends Component {
             <Picker.Item label="KOREA" value={'korea'} />
             <Picker.Item label="USA" value={'usa'} />
           </Picker>
-        </View>
-        <View>
-          <Text style={styles.input}>{this.state.value}</Text>
         </View>
       </View>
     );
@@ -67,6 +79,11 @@ const styles = StyleSheet.create({
     fontSize: 50,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  image: {
+    width: '100%',
+    height: 500,
+    backgroundColor: 'red',
   },
 });
 
